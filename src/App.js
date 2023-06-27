@@ -1,11 +1,11 @@
 import "./App.css";
 import Alert from "./Components/Alert";
-import About from "./Components/About";
+//import About from "./Components/About";
 import Navbar from "./Components/Navbar";
 import Textform from "./Components/Textform";
 import React, { useState } from "react";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 document.body.style.backgroundColor = "black";
 
@@ -72,7 +72,7 @@ function App() {
 
   return (
     <>
-      <Router>
+      
         <Navbar
           title="GodText"
           theme={pageMode}
@@ -82,25 +82,10 @@ function App() {
           theme3={theme3}
         />
         <Alert alert={alert} />
-        {/* <div className="container my-3">
+         <div className="container my-3">
         <Textform heading="Enter Text" theme={pageMode} showAlert={showAlert} />
-      </div> */}
-        <Routes>
-          <Route
-            exact path="/"
-            element={
-              <div className="container my-3">
-                <Textform
-                  heading="Enter Text"
-                  theme={pageMode}
-                  showAlert={showAlert}
-                />
-              </div>
-            }
-          />
-          <Route exact path="/about" element={<About theme={pageMode} />} />
-        </Routes>
-      </Router>
+      </div> 
+       
     </>
   );
 }
